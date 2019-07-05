@@ -1,0 +1,54 @@
+<div>
+    <form class="needs-validation" name="login" ng-submit="submit(login)" novalidate>
+        <br><br>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" style="text-align: center;">
+                    <label style="font-size: 25px;"><strong>LOGIN PAGE</strong></label>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <label for="validationCustomUsername">Email</label>
+                    <input ng-model='user.email' name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" type="email"
+                        class="form-control" id="validationCustomUsername" placeholder="Email"
+                        aria-describedby="inputGroupPrepend" required>
+                    <span style="color:Red" ng-show="login.email.$dirty && login.email.$error.pattern">Please
+                        Enter Valid Email
+                    </span>
+                    <span style="color:red" ng-show="login.email.$dirty && login.email.$invalid">
+                        <span ng-show="login.email.$error.required">Email is required.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <label for="validationCustom04">Password</label>
+                    <input ng-model='user.pwd' name="pwd" type="password" class="form-control" id="validationCustom04"
+                        placeholder="Password" required>
+                    <span style="color:red" ng-show="login.pwd.$dirty && login.pwd.$invalid">
+                        <span ng-show="login.pwd.$error.required">Password is required.</span>
+                    </span>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>

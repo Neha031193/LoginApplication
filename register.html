@@ -1,0 +1,63 @@
+<div>
+    <form class="needs-validation" name="register" ng-submit="submit(register)" novalidate>
+        <br><br>
+        <div class="form-row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <label style="font-size: 25px; text-align: center;"><strong>REGISTRATION PAGE</strong></label>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <br><br>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" name="firstname" class="form-control" id="validationCustom01"
+                    ng-model="user.firstName" placeholder="First name" required>
+                <span style="color:red" ng-show="register.firstname.$dirty && register.firstname.$invalid">
+                    <span ng-show="register.firstname.$error.required">First Name is required.</span>
+                </span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input name="lastname" ng-model="user.lastname" type="text" class="form-control" id="validationCustom02"
+                    placeholder="Last name" required>
+                <span style="color:red" ng-show="register.lastname.$dirty && register.lastname.$invalid">
+                    <span ng-show="register.lastname.$error.required">Last Name is required.</span>
+                </span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Email</label>
+                <input ng-model='user.email' name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" type="email"
+                    class="form-control" id="validationCustomUsername" placeholder="Email"
+                    aria-describedby="inputGroupPrepend" required>
+                <span style="color:Red" ng-show="register.email.$dirty && register.email.$error.pattern">Please Enter
+                    Valid Email
+                </span>
+                <span style="color:red" ng-show="register.email.$dirty && register.email.$invalid">
+                    <span ng-show="register.email.$error.required">Email is required.</span>
+                </span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Mobile Number</label>
+                <input maxlength="10" name="mobile" ng-model="user.mobile" type="text" ng-pattern="/[7-9]{1}[0-9]{9}/"
+                    class="form-control" id="validationCustom03" placeholder="Mobile Number" required>
+                <span style="color:red" ng-show="register.mobile.$error.pattern">Moible number not valid</span>
+                <span style="color:red" ng-show="register.mobile.$dirty && register.mobile.$invalid">
+                    <span ng-show="register.mobile.$error.required">Mobile Number is required.</span>
+                </span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom04">Password</label>
+                <input ng-model='user.pwd' name="pwd" type="password" class="form-control" id="validationCustom04"
+                    placeholder="Password" required>
+                <span style="color:red" ng-show="register.pwd.$dirty && register.pwd.$invalid">
+                    <span ng-show="register.pwd.$error.required">Password is required.</span>
+                </span>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+</div>
