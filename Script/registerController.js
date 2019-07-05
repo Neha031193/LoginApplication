@@ -2,7 +2,7 @@
 
 app.controller("registerController", ['$scope', '$localStorage', '$state', function ($scope, $localStorage, $state) {
   $scope.user = {};
-  $localStorage.user = {};
+  $localStorage.user = {};  
   $scope.submit = function (formName) {
     if (formName.$valid) {
       //  alert('form is valid');
