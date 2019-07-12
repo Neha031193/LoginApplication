@@ -19,5 +19,5 @@ app.config(['$stateProvider', function ($stateProvider) {
     $stateProvider.state('success', {
         url: '/success',
         template: '<strong>Success</strong>',
-    });
+    });    
 }]);
