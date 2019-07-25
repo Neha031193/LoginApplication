@@ -5,7 +5,7 @@ app.controller("loginController", ['$scope', '$localStorage', '$state', function
     if (formName.$valid) {
       if ($localStorage.user.email == $scope.user.email && $localStorage.user.pwd == $scope.user.pwd) {
         // window.location.href = '#/success';
-        $state.go('success');
+        $state.go('success state');
       } else {
         alert('Please enter registered email and password.');
       }
