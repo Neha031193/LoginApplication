@@ -12,7 +12,7 @@ app.controller("loginController", ['$scope', '$localStorage', '$state', function
     } else {
       alert('Form values are not valid');
     }
-  }      
+  }
 }]);  
 
 
